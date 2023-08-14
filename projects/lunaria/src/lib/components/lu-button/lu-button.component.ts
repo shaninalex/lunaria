@@ -1,59 +1,39 @@
 import { Component, HostBinding, Input } from '@angular/core';
 
 @Component({
-  selector: 'button[lu-button],input[lu-button],div[lu-button],a[lu-button]',
-  template: `<ng-content></ng-content>`,
-  styleUrls: ['./lu-button.component.scss']
+    selector: 'button[lu-button],input[lu-button],div[lu-button],a[lu-button]',
+    template: `<ng-content></ng-content>`,
+    styleUrls: ['./lu-button.component.scss'],
+    host: {
+        class: 'lu-btn',
+        
+        // theme
+        '[class.lu-btn-pilled]': `theme === 'pilled'`,
+
+        // color
+        '[class.lu-btn-color-primary]': `color === 'primary'`,
+        '[class.lu-btn-color-warning]': `color === 'warning'`,
+        '[class.lu-btn-color-success]': `color === 'success'`,
+        '[class.lu-btn-color-secondary]': `color === 'secondary'`,
+        '[class.lu-btn-color-error]': `color === 'error'`,
+
+        // appearance
+        '[class.lu-btn-outline]': `appearance === 'outline'`,
+        // '[class.lu-btn-rounded]': `appearance === 'rounded'`,
+
+        '[class.lu-btn-size-sm]': `size === 'small'`,
+        '[class.lu-btn-size-lg]': `size === 'large'`,
+
+    }
 })
 export class LuButtonComponent {
 
-    @Input("appearance") appearance: "solid" | "outline" = "solid";
-    @Input("theme") theme: "rounded" | "pilled" = "rounded";
-    @Input("color") color: "regular" | "warning" | "success" | "secondary" = "regular" 
+    @Input("size") size: "small" | "normal" | "large" = "normal";
+    @Input("appearance") appearance: "rounded" | "outline" = "rounded";
+    @Input("theme") theme: "regular" | "pilled" = "regular";
+    @Input("color") color: "primary" | "warning" | "success" | "secondary" | "error" = "primary"
 
-    @HostBinding("class")
-    get classes(): string {
-        return `
-        ${this.__rounded_classes()}
-        ${this.__appearance_classes()}
-        ${this.__appearance_colors()}
-        `
-    }
+    // TODO: icons
+    // TODO: spinner/loader
 
-    private __appearance_classes(): string {
-        return this.appearance === "solid"? "": "lu-btn-outline"
-    }
-
-    private __rounded_classes(): string {
-        let css_cls: string = "regular";
-        switch (this.theme) {
-            case "rounded":
-                css_cls = "";
-                break;
-            case "pilled":
-                css_cls = "lu-btn-pilled"
-                break;
-        }
-        return css_cls;
-    }
-
-    private __appearance_colors(): string {
-        let css_cls: string = "regular";
-        switch (this.color) {
-            case "regular":
-                css_cls = "lu-btn-regular";
-                break;
-            case "warning":
-                css_cls = "lu-btn-warning"
-                break;
-            case "success":
-                css_cls = "lu-btn-success"
-                break;
-            case "secondary":
-                css_cls = "lu-btn-secondary"
-                break;
-        }
-
-        return css_cls;
-    }
 }
