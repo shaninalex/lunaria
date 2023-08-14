@@ -1,0 +1,12 @@
+:host {
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.75rem;
+
+    
+    &.lu-btn-pilled {
+        border-radius: 1rem;
+    }
+}
