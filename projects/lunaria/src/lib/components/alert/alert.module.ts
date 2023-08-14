@@ -10,6 +10,9 @@ import { AlertComponent } from './alert.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    AlertComponent
   ]
 })
 export class AlertModule { }
