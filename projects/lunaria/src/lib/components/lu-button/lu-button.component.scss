@@ -73,9 +73,6 @@
     }
 }
 
-
-
-
 @mixin generate_outline_styles {
     &.lu-btn-outline {
         &.lu-btn-color-primary {
@@ -111,7 +108,9 @@
     cursor: pointer;
     text-transform: uppercase;
     font-size: 0.6875rem;
-
+    text-decoration: none;
+    font-family: $font;
+    
     &.lu-btn-pilled {
         border-radius: $border-radius-xl;
     }
