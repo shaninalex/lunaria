@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AlertModule } from '../../../lunaria/src/lib/components/alert/alert.module';
 import { LuButtonModule } from 'projects/lunaria/src/lib/components/lu-button/lu-button.module';
+import { LuInputModule } from 'projects/lunaria/src/public-api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     AlertModule,
     LuButtonModule,
+    LuInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
