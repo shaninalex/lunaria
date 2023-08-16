@@ -1,0 +1,30 @@
+.lu-input {
+    position: relative;
+    display: flex;
+    
+    >input {
+        width: 100%;
+        min-width: 0px;
+        outline: transparent solid 2px;
+        outline-offset: 2px;
+        position: relative;
+        appearance: none;
+        transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+        transition-duration: 0.2s;
+        height: 2.5rem;
+        border-radius: 0.375rem;
+        border-style: solid;
+        border-width: 1px;
+        border-image: none 100% / 1 / 0 stretch;
+        border-color: lightgray;
+        background: inherit;
+    }
+
+    &-icon {
+        position: absolute;
+
+        +input {
+            padding-left: 2rem;
+        }
+    }
+}
