@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'button[lu-button],input[lu-button],div[lu-button],a[lu-button]',
@@ -6,34 +6,30 @@ import { Component, HostBinding, Input } from '@angular/core';
     styleUrls: ['./lu-button.component.scss'],
     host: {
         class: 'lu-btn',
-        
-        // theme
-        '[class.lu-btn-pilled]': `theme === 'pilled'`,
 
         // color
-        '[class.lu-btn-color-primary]': `color === 'primary'`,
-        '[class.lu-btn-color-warning]': `color === 'warning'`,
-        '[class.lu-btn-color-success]': `color === 'success'`,
-        '[class.lu-btn-color-secondary]': `color === 'secondary'`,
-        '[class.lu-btn-color-error]': `color === 'error'`,
+        '[class.lu-btn-white]': `color === 'white'`,
+        '[class.lu-btn-primary]': `color === 'primary'`,
+        '[class.lu-btn-warning]': `color === 'warning'`,
+        '[class.lu-btn-danger]': `color === 'danger'`,
+        '[class.lu-btn-success]': `color === 'success'`,
 
-        // appearance
-        '[class.lu-btn-outline]': `appearance === 'outline'`,
-        // '[class.lu-btn-rounded]': `appearance === 'rounded'`,
+        // color outline
+        '[class.lu-btn-outline-white]': `color === 'white' && outline === true`,
+        '[class.lu-btn-outline-primary]': `color === 'primary' && outline === true`,
+        '[class.lu-btn-outline-warning]': `color === 'warning' && outline === true`,
+        '[class.lu-btn-outline-danger]': `color === 'danger' && outline === true`,
+        '[class.lu-btn-outline-success]': `color === 'success' && outline === true`,
 
-        '[class.lu-btn-size-sm]': `size === 'small'`,
-        '[class.lu-btn-size-lg]': `size === 'large'`,
-
+        // sizes
+        '[class.lu-btn-sm]': `size === 'small'`,
+        '[class.lu-btn-lg]': `size === 'large'`,
     }
 })
 export class LuButtonComponent {
 
-    @Input("size") size: "small" | "normal" | "large" = "normal";
-    @Input("appearance") appearance: "rounded" | "outline" = "rounded";
-    @Input("theme") theme: "regular" | "pilled" = "regular";
-    @Input("color") color: "primary" | "warning" | "success" | "secondary" | "error" = "primary"
-
-    // TODO: icons
-    // TODO: spinner/loader
+    @Input("size") size: "small" | "normal" | "large";
+    @Input("outline") outline: boolean;
+    @Input("color") color: "white" | "primary" | "warning" | "danger" | "success";
 
 }

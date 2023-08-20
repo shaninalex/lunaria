@@ -1,0 +1,33 @@
+<div class="icon"
+    [class.icon-box]="boxed"
+    [class.icon-hovered]="hovered"
+    [class.icon-outlined]="outlined"
+
+    [class.icon-size-xs]="size === 'xs'"
+    [class.icon-size-sm]="size === 'sm'"
+    [class.icon-size-md]="size === 'md'"
+    [class.icon-size-lg]="size === 'lg'"
+    [class.icon-size-xl]="size === 'xl'"
+    [class.icon-size-2xl]="size === '2xl'"
+    [class.icon-size-3xl]="size === '3xl'"
+
+    [class.icon-color-gray]="color === 'gray'"
+    [class.icon-color-red]="color === 'red'"
+    [class.icon-color-orange]="color === 'orange'"
+    [class.icon-color-yellow]="color === 'yellow'"
+    [class.icon-color-green]="color === 'green'"
+    [class.icon-color-teal]="color === 'teal'"
+    [class.icon-color-blue]="color === 'blue'"
+    [class.icon-color-cyan]="color === 'cyan'"
+    [class.icon-color-purple]="color === 'purple'"
+    [class.icon-color-pink]="color === 'pink'"
+    [class.icon-color-white]="color === 'white'"
+>
+
+<!-- bell -->
+<svg *ngIf="icon === 'bell'" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.02009 1.91003C5.71009 1.91003 3.02009 4.60003 3.02009 7.91003V10.8C3.02009 11.41 2.76009 12.34 2.45009 12.86L1.30009 14.77C0.590088 15.95 1.08009 17.26 2.38009 17.7C6.69009 19.14 11.3401 19.14 15.6501 17.7C16.8601 17.3 17.3901 15.87 16.7301 14.77L15.5801 12.86C15.2801 12.34 15.0201 11.41 15.0201 10.8V7.91003C15.0201 4.61003 12.3201 1.91003 9.02009 1.91003Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/><path d="M10.8699 2.19994C10.5599 2.10994 10.2399 2.03994 9.90992 1.99994C8.94992 1.87994 8.02992 1.94994 7.16992 2.19994C7.45992 1.45994 8.17992 0.939941 9.01992 0.939941C9.85992 0.939941 10.5799 1.45994 10.8699 2.19994Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.02 18.0601C12.02 19.7101 10.67 21.0601 9.02002 21.0601C8.20002 21.0601 7.44002 20.7201 6.90002 20.1801C6.36002 19.6401 6.02002 18.8801 6.02002 18.0601" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"/></svg>
+
+<!-- email -->
+<svg *ngIf="icon === 'email'" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+</div>
