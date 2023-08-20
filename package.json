@@ -1,6 +1,9 @@
 {
   "name": "lunaria-theme",
-  "version": "0.0.3",
+  "version": "0.0.34",
+  "repository": {
+    "url": "https://github.com/shaninalex/lunaria-theme"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
