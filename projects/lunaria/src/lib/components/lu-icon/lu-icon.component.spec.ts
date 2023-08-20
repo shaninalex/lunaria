@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AlertComponent } from './alert.component';
+import { LuIconComponent } from './lu-icon.component';
 
-describe('AlertComponent', () => {
-  let component: AlertComponent;
-  let fixture: ComponentFixture<AlertComponent>;
+describe('LuIconComponent', () => {
+  let component: LuIconComponent;
+  let fixture: ComponentFixture<LuIconComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AlertComponent]
+      declarations: [LuIconComponent]
     });
-    fixture = TestBed.createComponent(AlertComponent);
+    fixture = TestBed.createComponent(LuIconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

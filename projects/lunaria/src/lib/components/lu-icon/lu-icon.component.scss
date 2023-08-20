@@ -1,0 +1,130 @@
+@import "../_shared/scss/variables";
+
+$icon_colors: (
+    'gray': $color-gray-400,
+    'red': $color-red-400,
+    'orange': $color-orange-400,
+    'yellow': $color-yellow-400,
+    'green': $color-green-400,
+    'teal': $color-teal-400,
+    'blue': $color-blue-400,
+    'cyan': $color-cyan-400,
+    'purple': $color-purple-400,
+    'pink': $color-pink-400,
+    'white': $color-white,
+);
+
+@mixin boxed-icon-size($size) {
+    border-radius: $size / 4;
+    height: $size;
+    width: $size;
+}
+
+@mixin set_regular_icon_color() {
+    @each $name, $color in $icon_colors {
+        &.icon-color-#{$name} {
+            svg {
+                path {
+                    stroke: $color;
+                }
+            }
+        }
+    }
+}
+
+@mixin icon_generate_outline_style($name, $color) {
+    @if $name == 'white' {
+        background-color: $color-gray-400;
+    } @else {
+        background-color: transparent;
+    }
+
+    svg {
+        path {
+            @if $name == 'white' {
+                stroke: $color-white;
+            } @else {
+                stroke: $color
+            }
+        }
+    }
+}
+
+@mixin set_boxed_icon_color() {
+    @each $name, $color in $icon_colors {
+        &.icon-color-#{$name} {
+            background-color: $color;
+
+            @if $name == 'white' {
+                border-color: $color-gray-400;
+            } @else {
+                border-color: $color;
+            }
+
+            svg {
+                path {
+                    @if $name == 'white' {
+                        stroke: $color-gray-400;
+                    } @else {
+                        stroke: $color-white;
+                    }
+                }
+            }
+
+            &.icon-outlined,
+            &.icon-hovered:hover {
+                @include icon_generate_outline_style($name, $color);
+            }
+
+
+        }
+    }
+}
+
+@mixin icon_size($size) {
+    svg {
+        height: $size;
+        width: $size;
+    }
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include icon_size(1.875rem);
+    @include set_regular_icon_color();
+
+    &:not(.icon-box) {
+        &.icon-size-xs { @include icon_size(0.75rem) }
+        &.icon-size-sm  { @include icon_size(1.5625rem) }
+        &.icon-size-md { @include icon_size(1.875rem) }
+        &.icon-size-lg { @include icon_size(2.1875rem) }
+        &.icon-size-xl { @include icon_size(2.8125rem) }
+        &.icon-size-2xl { @include icon_size(4rem) }
+        &.icon-size-3xl { @include icon_size(4.6875rem) }
+    }
+
+    &.icon-box {
+        border-width: 1px;
+        border-style: solid;
+
+        @include boxed-icon-size(2.813rem);
+        @include set_boxed_icon_color();
+
+        &.icon-size-xs { @include boxed-icon-size(0.75rem) }
+        &.icon-size-sm  { @include boxed-icon-size(1.5625rem) }
+        &.icon-size-md { @include boxed-icon-size(1.875rem) }
+        &.icon-size-lg { @include boxed-icon-size(2.1875rem) }
+        &.icon-size-xl { @include boxed-icon-size(2.8125rem) }
+        &.icon-size-2xl { @include boxed-icon-size(4rem) }
+        &.icon-size-3xl { @include boxed-icon-size(4.6875rem) }
+
+        svg {
+            height: 55%;
+            max-height: 25px;
+            max-width: 25px;
+            width: 55%;
+        }
+    }
+}
