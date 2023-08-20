@@ -1,6 +1,6 @@
 {
   "name": "lunaria",
-  "version": "0.0.32",
+  "version": "0.0.34",
   "peerDependencies": {
     "@angular/common": "^16.1.0",
     "@angular/core": "^16.1.0"
@@ -8,5 +8,8 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "repository": {
+    "url": "https://github.com/shaninalex/lunaria-theme"
+  }
 }
