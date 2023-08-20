@@ -11,5 +11,4 @@ export class LuInputComponent {
     constructor() {
         this.icon = null
     }
-
 }
