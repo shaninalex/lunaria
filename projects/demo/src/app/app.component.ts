@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {ButtonModule} from '../../../lunaria/src/lib/components/button';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    imports: [RouterOutlet, ButtonModule],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'demo';
+    title = 'demo';
 }

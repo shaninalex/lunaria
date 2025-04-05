@@ -1,0 +1,4 @@
+{
+    "include":["projects/lunaria/src/**/*.ts"],
+    "exclude":["projects/lunaria/src/**/*.spec.ts"]
+}
