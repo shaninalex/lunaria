@@ -3,6 +3,11 @@ import {Component, Input} from '@angular/core';
 type BtnSizeT = 'mini' | 'tiny' | 'small' | 'default' | 'large' | 'big' | 'huge' | 'massive';
 type BtnColorT = 'red' | 'orange' | 'yellow' | 'olive' | 'green' | 'teal' | 'blue' | 'violet' | 'purple' | 'pink' | 'brown' | 'grey' | 'black';
 
+/**
+ * Reusable Lunaria Button
+ *
+ * @component
+ */
 @Component({
     selector: '[lu-button]',
     standalone: false,
@@ -41,13 +46,22 @@ type BtnColorT = 'red' | 'orange' | 'yellow' | 'olive' | 'green' | 'teal' | 'blu
     styleUrl: 'button.component.scss'
 })
 export class ButtonComponent {
-    // Button size. Based on fontsize, padding changing by em
+
+    /**
+     * Button size.
+     * - Affects font size and padding via `em`.
+     * - Available values: `mini`, `tiny`, `small`, `default`, `large`, etc.
+     */
     @Input() size: BtnSizeT = 'default';
 
-    // Button colors. I do not use bootstrap like 'success', 'waring', 'default' system
-    // because of amount of colors we have
+    /**
+     * Button colors. I do not use bootstrap like 'success', 'waring', 'default' system
+     * because of amount of colors we have
+     * */
     @Input() color: BtnColorT = 'grey';
 
-    // Outline button with transparent background and border.
+    /**
+     * Outline button with transparent background and border.
+     * */
     @Input() outline: boolean = false;
 }

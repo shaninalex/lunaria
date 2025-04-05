@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../../shared/variables" as var;
 
 $variants: (
@@ -52,60 +53,60 @@ $sizes: (
     transition: opacity .1s ease, background-color .1s ease, color .1s ease, box-shadow .1s ease, background .1s ease;
 
     &:hover {
-        background-color: darken(var.$grey, 10);
+        background-color: color.adjust(var.$grey, $lightness: -10%)
     }
 
     &:active {
-        background-color: darken(var.$grey, 20);
+        background-color: color.adjust(var.$grey, $lightness: -20%)
     }
 
     @each $name, $size in $sizes {
-        &.#{$name} {
+        &.#{"" + $name} {
             font-size: $size
         }
     }
 
     @each $name, $color in $variants {
-        &.#{$name} {
+        &.#{"" + $name} {
             background-color: $color;
             color: white;
 
             &:hover {
-                background-color: darken($color, 10%);
+                background-color: color.adjust($color, $lightness: -10%)
             }
 
             &:active {
-                    background-color: darken($color, 20%);
+                background-color: color.adjust($color, $lightness: -20%)
             }
         }
     }
 
     &.outline {
-        border: 1px solid darken(var.$grey, 30%);
+        border: 1px solid color.adjust(var.$grey, $lightness: -30%);
         background-color: transparent;
-        color: darken(var.$grey, 30%);
+        color: color.adjust(var.$grey, $lightness: -30%);
 
         &:hover {
-            color: darken(var.$grey, 40%);
+            color: color.adjust(var.$grey, $lightness: -40%);
         }
 
         &:active {
-            color: darken(var.$grey, 50%);
+            color: color.adjust(var.$grey, $lightness: -50%);
         }
     }
 
     @each $name, $color in $variants {
-        &.outline.#{$name} {
+        &.outline.#{"" + $name} {
             border: 1px solid $color;
             background-color: transparent;
             color: $color;
 
             &:hover {
-                color: darken($color, 10%);
+                color: color.adjust(var.$grey, $lightness: -10%);
             }
 
             &:active {
-                color: darken($color, 20%);
+                color: color.adjust(var.$grey, $lightness: -20%);
             }
         }
     }
