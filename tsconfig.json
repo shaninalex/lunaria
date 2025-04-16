@@ -9,8 +9,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "paths": {
       "lunaria": [
-        "./dist/lunaria",
-        "./dist/lunaria"
+        "./projects/lunaria/src",
       ]
     },
     "noImplicitReturns": true,

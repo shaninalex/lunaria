@@ -6,4 +6,4 @@
 // export * from './lib/lunaria.component';
 export * from './lib/lunaria.module';
 
-export * from './lib/components/button';
+export * from './lib/components';

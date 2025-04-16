@@ -12,7 +12,7 @@ type BtnColorT = 'red' | 'orange' | 'yellow' | 'olive' | 'green' | 'teal' | 'blu
     selector: '[lu-button]',
     standalone: false,
     template: `
-        <ng-content></ng-content>`,
+        <ng-content />`,
     host: {
         class: 'ui button',
 

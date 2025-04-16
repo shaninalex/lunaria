@@ -12,4 +12,10 @@
 <button lu-button color="grey">Grey</button>
 <button lu-button color="black">Black</button>
 
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <lu-form-input formControlName="name" placeholder="Enter your name" />
+    <lu-form-input formControlName="email" type="email" placeholder="Enter your email" />
+    <button type="submit" lu-button color="grey" size="tiny">Submit</button>
+</form>
+
 <router-outlet />
